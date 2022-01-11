@@ -28,7 +28,7 @@ public class App extends JavaPlugin {
     @EventHandler
     public void Prepare(PrepareItemCraftEvent event) {
         // Player player = (Player) event.;
-        String name = player.getName();
+        // String name = player.getName();
 
     }
     // Watch for item craft or enchant

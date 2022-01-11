@@ -1,13 +1,12 @@
 package org.filnari.makerlore;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import net.md_5.bungee.api.chat.hover.content.Item;
-
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.inventory.CraftItemEvent;
 import org.bukkit.event.inventory.PrepareItemCraftEvent;
 import org.bukkit.inventory.ItemStack;
+
 public class App extends JavaPlugin {
     @Override
     public void onEnable() {

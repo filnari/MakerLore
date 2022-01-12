@@ -7,11 +7,14 @@ import org.bukkit.event.inventory.CraftItemEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.PrepareItemCraftEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.event.Listener;
 
-public class App extends JavaPlugin {
+public class App extends JavaPlugin implements Listener {
+
     @Override
     public void onEnable() {
         getLogger().info("Enabling MakerLore");
+        getServer().getPluginManager().registerEvents(this, this);
     }
     @Override
     public void onDisable() {
@@ -23,11 +26,14 @@ public class App extends JavaPlugin {
     //
     @EventHandler
     public void CraftDone(InventoryClickEvent event) {
-        ItemStack item = event.getCurrentItem();
+        ItemStack i = event.getCurrentItem();
         Player p = (Player) event.getWhoClicked();
+        int slot = event.getSlot();
+        getLogger().info(p+" clicked "+i+" slot #"+slot);
 
     }
 
+    /*
     @EventHandler
     public void Craft(CraftItemEvent event) {
         Player player = (Player) event.getWhoClicked();
@@ -41,6 +47,8 @@ public class App extends JavaPlugin {
         // String name = player.getName();
 
     }
+    */
+
     // Watch for item craft or enchant
 
     // case the type of item

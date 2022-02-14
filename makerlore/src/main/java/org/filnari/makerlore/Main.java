@@ -23,7 +23,7 @@ public class Main extends JavaPlugin implements Listener {
         getLogger().info("Disabling MakerLore");
     }
 
-    // I think it's this one.
+    // I think it's this one. maybe
     // https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/inventory/CraftItemEvent.html
     //
     @EventHandler

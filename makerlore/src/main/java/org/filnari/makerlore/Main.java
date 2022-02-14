@@ -1,6 +1,7 @@
 package org.filnari.makerlore;
-import org.bukkit.plugin.java.JavaPlugin;
 
+import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.inventory.CraftItemEvent;
@@ -8,8 +9,9 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.PrepareItemCraftEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.event.Listener;
+import org.bukkit.inventory.ItemStack;
 
-public class App extends JavaPlugin implements Listener {
+public class Main extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
@@ -29,6 +31,9 @@ public class App extends JavaPlugin implements Listener {
         ItemStack i = event.getCurrentItem();
         Player p = (Player) event.getWhoClicked();
         int slot = event.getSlot();
+        ItemStack i2 = new ItemStack(Material.AIR,0);
+        if (i.equals(i2)) { return;}
+
         getLogger().info(p+" clicked "+i+" slot #"+slot);
 
     }
